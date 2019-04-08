@@ -17,8 +17,11 @@ class Home extends Component {
             <span
               to="/"
               className="btn-floating halfway-fab waves-effect waves-light red"
+              // onClick={() => {
+              //   this.handleClick(item.id);
+              // }}
               onClick={() => {
-                this.handleClick(item.id);
+                this.props.addToCart(item.id);
               }}
             >
               <i className="material-icons">add</i>

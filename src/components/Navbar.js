@@ -13,11 +13,9 @@ const Navbar = () => {
             <Link to="/">Shop</Link>
           </li>
           <li>
-            <Link to="/cart">My cart</Link>
-          </li>
-          <li>
-            <Link to="/cart">
-              <i className="material-icons">shopping_cart</i>
+            <Link to="/cart" className="valign-wrapper">
+              My cart
+              <i className="material-icons right">shopping_cart</i>
             </Link>
           </li>
         </ul>
