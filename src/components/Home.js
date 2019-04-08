@@ -3,10 +3,6 @@ import { connect } from "react-redux";
 import { addToCart } from "../actions/CartActions";
 
 class Home extends Component {
-  handleClick = id => {
-    this.props.addToCart(id);
-  };
-
   render() {
     let itemList = this.props.items.map(item => {
       return (
@@ -17,9 +13,6 @@ class Home extends Component {
             <span
               to="/"
               className="btn-floating halfway-fab waves-effect waves-light red"
-              // onClick={() => {
-              //   this.handleClick(item.id);
-              // }}
               onClick={() => {
                 this.props.addToCart(item.id);
               }}
