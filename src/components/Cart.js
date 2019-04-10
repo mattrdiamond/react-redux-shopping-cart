@@ -6,21 +6,24 @@ import {
   addQuantity,
   subtractQuantity
 } from "../actions/CartActions";
-import Recipe from "./Recipe";
+import CartTotal from "./CartTotal";
 
 class Cart extends Component {
   //to remove the item completely
   handleRemove = id => {
     this.props.removeItem(id);
   };
+
   //to add the quantity
   handleAddQuantity = id => {
     this.props.addQuantity(id);
   };
+
   //to substruct from the quantity
   handleSubtractQuantity = id => {
     this.props.subtractQuantity(id);
   };
+
   render() {
     let addedItems = this.props.items.length ? (
       this.props.items.map(item => {
@@ -74,15 +77,15 @@ class Cart extends Component {
         );
       })
     ) : (
-      <p>Nothing.</p>
+      <p>Your cart is currently empty</p>
     );
     return (
       <div className="container">
         <div className="cart">
-          <h5>You have ordered:</h5>
+          <h5>Your order:</h5>
           <ul className="collection">{addedItems}</ul>
         </div>
-        <Recipe />
+        <CartTotal />
       </div>
     );
   }
@@ -91,9 +94,9 @@ class Cart extends Component {
 const mapStateToProps = state => {
   return {
     items: state.addedItems
-    //addedItems: state.addedItems
   };
 };
+
 const mapDispatchToProps = dispatch => {
   return {
     removeItem: id => {

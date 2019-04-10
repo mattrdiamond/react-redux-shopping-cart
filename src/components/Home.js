@@ -24,7 +24,7 @@ class Home extends Component {
           <div className="card-content">
             <p>{item.desc}</p>
             <p>
-              <b>Price: {item.price}$</b>
+              <b>Price: ${item.price}</b>
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ class Home extends Component {
 
     return (
       <div className="container">
-        <h3 className="center">Our items</h3>
+        <h3 className="center">Sale items</h3>
         <div className="box">{itemList}</div>
       </div>
     );
