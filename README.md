@@ -2,6 +2,8 @@
 
 Shopping cart tutorial by AyaBellazreg. I learned how to build a simple e-commerce app using React and Redux. The app is styled using the Materialize CSS framework.
 
+![Screenshot of Shopping Cart App](img/screenshot.jpg)
+
 ## Features
 
 - Add and remove items from the shopping cart
